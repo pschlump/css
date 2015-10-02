@@ -41,6 +41,12 @@ func TestMatchers(t *testing.T) {
 	checkMatch(".42%", TokenPercentage, ".42%")
 	checkMatch("42px", TokenDimension, "42px")
 	checkMatch("url('http://www.google.com/')", TokenURI, "url('http://www.google.com/')")
+
+	checkMatch("url(http://www.google.com/)", TokenURI, "url(http://www.google.com/)") // Add extra forms of URL -- Philip Schlump, 2015
+	checkMatch("url(\"http://www.google.com/\")", TokenURI, "url(\"http://www.google.com/\")")
+	checkMatch("url(./bob/img.jpg)", TokenURI, "url(./bob/img.jpg)")
+	checkMatch("url(bob/img.jpg)", TokenURI, "url(bob/img.jpg)")
+
 	checkMatch("U+0042", TokenUnicodeRange, "U+0042")
 	checkMatch("<!--", TokenCDO, "<!--")
 	checkMatch("-->", TokenCDC, "-->")

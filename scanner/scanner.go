@@ -30,12 +30,10 @@ type Token struct {
 
 // String returns a string representation of the token.
 func (t *Token) String() string {
-	if len(t.Value) > 10 {
-		return fmt.Sprintf("%s (line: %d, column: %d): %.10q...",
-			t.Type, t.Line, t.Column, t.Value)
-	}
-	return fmt.Sprintf("%s (line: %d, column: %d): %q",
-		t.Type, t.Line, t.Column, t.Value)
+	//if len(t.Value) > 10 {
+	//	return fmt.Sprintf("%s (line: %d, column: %d): %.10q...", t.Type, t.Line, t.Column, t.Value)
+	//}
+	return fmt.Sprintf("%s (line: %d, column: %d): %q", t.Type, t.Line, t.Column, t.Value)
 }
 
 // All tokens -----------------------------------------------------------------
