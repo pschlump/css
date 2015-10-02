@@ -1,0 +1,13 @@
+.abc {
+	color: green;
+	background-image: url(./bob.jpg)
+}
+/* A comment */
+.abc-xyz {
+	color: green;
+/* A 
+multi
+line 
+ comment */
+	background-image: url(./bob.jpg)
+}
