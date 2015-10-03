@@ -65,7 +65,7 @@ const (
 	TokenSubstringMatch
 	TokenChar
 	TokenBOM
-	TokenImportURI
+	TokenImportURI // Used at a higher level see https://github.com/pschlump/css-xyzzy
 )
 
 // tokenNames maps tokenType's to their names. Used for conversion to string.
