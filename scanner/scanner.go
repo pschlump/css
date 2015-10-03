@@ -65,6 +65,7 @@ const (
 	TokenSubstringMatch
 	TokenChar
 	TokenBOM
+	TokenImportURI
 )
 
 // tokenNames maps tokenType's to their names. Used for conversion to string.
@@ -92,6 +93,7 @@ var tokenNames = map[tokenType]string{
 	TokenSubstringMatch: "SUBSTRINGMATCH",
 	TokenChar:           "CHAR",
 	TokenBOM:            "BOM",
+	TokenImportURI:      "ImportURI",
 }
 
 // Macros and productions -----------------------------------------------------
